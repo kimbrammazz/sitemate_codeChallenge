@@ -17,19 +17,24 @@ const modalButtons = document.querySelectorAll(".btn");
 const displayAnswer = document.querySelector(".response");
 const answer = document.querySelector(".answer");
 
+const removeModal = () => {
+	modal.classList.remove("show-modal");
+	displayAnswer.classList.add("display-response");
+};
+
 modalButtons.forEach((btn) => {
 	//console.log(btn);
 	//console.log(btn.classList);
 
 	btn.addEventListener("click", () => {
 		if (btn.classList.contains("btn-yes")) {
-			modal.classList.remove("show-modal");
+			//modal.classList.remove("show-modal");
 			answer.textContent = `"yes"`;
-			displayAnswer.classList.add("display-response");
+			//displayAnswer.classList.add("display-response");
+			removeModal();
 		} else {
-			modal.classList.remove("show-modal");
 			answer.textContent = `"cancel"`;
-			displayAnswer.classList.add("display-response");
+			removeModal();
 		}
 	});
 });
