@@ -1,0 +1,16 @@
+.modal-container {
+	visibility: hidden;
+}
+
+/* show modal */
+.show-modal {
+	visibility: visible;
+}
+
+.response {
+	visibility: hidden;
+}
+
+.display-response {
+	visibility: visible;
+}
