@@ -6,7 +6,7 @@
 
 // display modal
 const clickMe = document.querySelector(".click-me");
-const modal = document.querySelector(".modal-container");
+const modal = document.querySelector(".modal-overlay");
 
 clickMe.addEventListener("click", () => {
 	modal.classList.add("show-modal");
@@ -19,17 +19,16 @@ const answer = document.querySelector(".answer");
 
 modalButtons.forEach((btn) => {
 	//console.log(btn);
-	console.log(btn.classList);
+	//console.log(btn.classList);
 
-	btn.addEventListener("click", (e) => {
-		modal.classList;
+	btn.addEventListener("click", () => {
 		if (btn.classList.contains("btn-yes")) {
 			modal.classList.remove("show-modal");
-			answer.textContent = "yes";
+			answer.textContent = `"yes"`;
 			displayAnswer.classList.add("display-response");
 		} else {
 			modal.classList.remove("show-modal");
-			answer.textContent = "cancel";
+			answer.textContent = `"cancel"`;
 			displayAnswer.classList.add("display-response");
 		}
 	});
