@@ -17,6 +17,7 @@ const modalButtons = document.querySelectorAll(".btn");
 const displayAnswer = document.querySelector(".response");
 const answer = document.querySelector(".answer");
 
+// function to remove modal and display response
 const removeModal = () => {
 	modal.classList.remove("show-modal");
 	displayAnswer.classList.add("display-response");
